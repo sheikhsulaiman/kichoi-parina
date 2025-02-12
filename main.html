@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parina Kicchu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #eb25d1;
+        }
+        .subtext {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: rgb(251, 251, 251);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            margin: 10px 0;
+            color: #111827;
+        }
+        .card p {
+            color: #6b7280;
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #d274ef;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #2fa9dd;
+        }
+    </style>
+    <script>
+        function exploreCourse(course) {
+            window.location.href = course.toLowerCase().replace(/\s+/g, "-") + ".html";
+        }
+    </script>
+</head>
+<body>
+    <div class="header">Parina Kicchu</div>
+    <p class="subtext">Find your perfect learning path and explore your passion.</p>
+    <div class="courses">
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>Learn HTML, CSS, JS, and frameworks like React.</p>
+            <button class="button" onclick="exploreCourse('webcourse')">Explore Course</button>
+        </div>
+        <div class="card">
+            <h2>Video Editing</h2>
+            <p>Master Premiere Pro, After Effects, and video storytelling.</p>
+            <button class="button" onclick="exploreCourse('video-editing')">Explore Course</button>
+        </div>
+        <div class="card">
+            <h2>Graphic Design</h2>
+            <p>Explore Photoshop, Illustrator, and branding concepts.</p>
+            <button class="button" onclick="exploreCourse('graphic-design')">Explore Course</button>
+        </div>
+        <div class="card">
+            <h2>Content Writing</h2>
+            <p>Develop strong writing and research skills.</p>
+            <button class="button" onclick="exploreCourse('content-writing')">Explore Course</button>
+        </div>
+        <div class="card">
+            <h2>Android Learning</h2>
+            <p>Learn to build app as you want.</p>
+            <button class="button" onclick="exploreCourse('android-learning')">Explore Course</button>
+        </div>
+        <div class="card">
+            <h2>Photography</h2>
+            <p>Click and capture your dream in picture.</p>
+            <button class="button" onclick="exploreCourse('photography')">Explore Course</button>
+        </div>
+        <div class="card">
+            <h2>Machine Learning</h2>
+            <p>Learn how Machine learns and work. Make your own machine learning concept. </p>
+            <button class="button" onclick="exploreCourse('machine-learning')">Explore Course</button>
+        </div>
+    </div>
+</body>
+</html>
