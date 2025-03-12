@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Writing Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        .subtext {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .topic {
+            background: #e0e7ff;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .topic h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+        }
+        .topic p {
+            color: #444;
+        }
+        .topic a {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .topic a:hover {
+            color: #1d4ed8;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video {
+            width: 100%;
+            max-width: 400px;
+        }
+        .upload-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .upload-section input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Content Writing Learning</div>
+    <p class="subtext">Master the art of writing and create compelling content.</p>
+
+    <div class="container">
+        <div class="topic">
+            <h3>Introduction to Content Writing</h3>
+            <p>Learn what content writing is and why it's important.</p>
+            <a href="https://www.contentmarketinginstitute.com/what-is-content-marketing/" target="_blank">Read More</a>
+        </div>
+
+        <div class="topic">
+            <h3>Understanding Your Audience</h3>
+            <p>Discover how to analyze your audience and tailor your content.</p>
+            <a href="https://www.hubspot.com/content-marketing" target="_blank">Learn More</a>
+        </div>
+
+        <div class="topic">
+            <h3>Writing for the Web: Blog Posts & Articles</h3>
+            <p>Learn how to structure blog posts and write engaging articles.</p>
+            <a href="https://problogger.com/" target="_blank">Blog Writing Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>SEO Writing & Keyword Optimization</h3>
+            <p>Understand SEO principles to improve search rankings.</p>
+            <a href="https://moz.com/learn/seo/content-marketing" target="_blank">SEO Basics</a>
+        </div>
+
+        <div class="topic">
+            <h3>Copywriting Techniques & Persuasive Writing</h3>
+            <p>Master persuasive writing techniques to attract readers.</p>
+            <a href="https://copyblogger.com/" target="_blank">Copywriting Tips</a>
+        </div>
+
+        <div class="topic">
+            <h3>Content Planning & Strategy</h3>
+            <p>Develop an effective content marketing plan.</p>
+            <a href="https://coschedule.com/blog/content-marketing-strategy/" target="_blank">Content Strategy</a>
+        </div>
+
+        <div class="topic">
+            <h3>Building a Portfolio & Freelancing Tips</h3>
+            <p>Learn how to showcase your work and get clients.</p>
+            <a href="https://www.freelancewriting.com/" target="_blank">Freelance Writing Guide</a>
+        </div>
+
+        <h3 style="color:#2563eb; margin-top: 30px;">Video Tutorials</h3>
+        <div class="video-container">
+            <iframe class="video" src="https://www.youtube.com/embed/Ym_lkGQuw60" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/Bo0yFhTY4ZQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload Your Own Learning Material</h3>
+            <input type="file" id="uploadFile" accept="image/*,video/*,pdf">
+            <p id="uploadMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("uploadFile").addEventListener("change", function() {
+            document.getElementById("uploadMessage").innerText = "File uploaded successfully!";
+        });
+    </script>
+</body>
+</html>
