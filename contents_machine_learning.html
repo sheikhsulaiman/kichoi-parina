@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        .subtext {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .topic {
+            background: #dbeafe;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .topic h3 {
+            color: #1e40af;
+            font-size: 1.3rem;
+        }
+        .topic p {
+            color: #444;
+        }
+        .topic a {
+            color: #1e3a8a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .topic a:hover {
+            color: #172554;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video {
+            width: 100%;
+            max-width: 400px;
+        }
+        .upload-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .upload-section input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Machine Learning Course</div>
+    <p class="subtext">Dive into the world of machine learning, explore algorithms, and build predictive models using Python and libraries like TensorFlow and Scikit-learn.</p>
+
+    <div class="container">
+        <h2>Course Syllabus</h2>
+        
+        <div class="topic">
+            <h3>Introduction to Machine Learning</h3>
+            <p>Understand the fundamentals of ML and its real-world applications.</p>
+            <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Learn More</a>
+        </div>
+
+        <div class="topic">
+            <h3>Supervised vs. Unsupervised Learning</h3>
+            <p>Discover different learning techniques and their use cases.</p>
+            <a href="https://towardsdatascience.com/supervised-vs-unsupervised-learning-14f68e32ea8d" target="_blank">Read Article</a>
+        </div>
+
+        <div class="topic">
+            <h3>Understanding Regression & Classification</h3>
+            <p>Master the concepts of linear regression, logistic regression, and classification algorithms.</p>
+            <a href="https://scikit-learn.org/stable/supervised_learning.html" target="_blank">Scikit-Learn Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Exploring Decision Trees, SVMs, and Neural Networks</h3>
+            <p>Learn how these powerful ML models work.</p>
+            <a href="https://towardsdatascience.com/decision-trees-and-random-forests-1c04f32a7f14" target="_blank">Read More</a>
+        </div>
+
+        <div class="topic">
+            <h3>Data Preprocessing and Feature Engineering</h3>
+            <p>Prepare datasets for ML models with feature selection and normalization.</p>
+            <a href="https://machinelearningmastery.com/data-preparation-machine-learning/" target="_blank">Data Preparation Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Model Evaluation & Hyperparameter Tuning</h3>
+            <p>Optimize ML models using techniques like Grid Search and Cross-Validation.</p>
+            <a href="https://machinelearningmastery.com/hyperparameter-optimization-with-random-search-and-grid-search/" target="_blank">Tuning Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Building Machine Learning Projects & Deployment</h3>
+            <p>Deploy ML models using Flask, FastAPI, or cloud platforms.</p>
+            <a href="https://towardsdatascience.com/deploy-machine-learning-model-using-flask-cbf286f9b448" target="_blank">Deployment Tutorial</a>
+        </div>
+
+        <h3 style="color:#1e40af; margin-top: 30px;">Video Tutorials</h3>
+        <div class="video-container">
+            <iframe class="video" src="https://www.youtube.com/embed/GwIo3gDZCVQ" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/7eh4d6sabA0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload Your Own Learning Material</h3>
+            <input type="file" id="uploadFile" accept="image/*,video/*,pdf">
+            <p id="uploadMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("uploadFile").addEventListener("change", function() {
+            document.getElementById("uploadMessage").innerText = "File uploaded successfully!";
+        });
+    </script>
+</body>
+</html>
