@@ -12,6 +12,35 @@
             margin: 0;
             padding: 20px;
         }
+        .navbar {
+            background-color: #b24dd182;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(198, 34, 173);
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(155, 41, 41);
+            text-decoration: none;
+            font-size: 1rem;
+        }
         .header {
             font-size: 2rem;
             font-weight: bold;
@@ -56,14 +85,85 @@
         .button:hover {
             background-color: #2fa9dd;
         }
+        .stats-section {
+            background-color: #1f2937;
+            color: white;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 200px;
+        }
+        .stat:hover {
+            transform: scale(1.1);
+        }
+        .stat h2 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .stat p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .footer div {
+            max-width: 250px;
+        }
+        .footer h3 {
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4b5563;
+            padding-bottom: 5px;
+        }
+        .footer a {
+            color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            margin-top: 5px;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        .copyright {
+            text-align: center;
+            background: #111827;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
     </style>
-    <script>
+     <script>
         function exploreCourse(course) {
             window.location.href = course.toLowerCase().replace(/\s+/g, "-") + ".html";
         }
     </script>
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo">Parina Kicchu</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
     <div class="header">Parina Kicchu</div>
     <p class="subtext">Find your perfect learning path and explore your passion.</p>
     <div class="courses">
@@ -102,6 +202,49 @@
             <p>Learn how Machine learns and work. Make your own machine learning concept. </p>
             <button class="button" onclick="exploreCourse('machine-learning')">Explore Course</button>
         </div>
+    </div>
+    <div class="stats-section">
+        <div class="stat">
+            <h2>2025</h2>
+            <p>Founded</p>
+        </div>
+        <div class="stat">
+            <h2>45+</h2>
+            <p>Faculty Members</p>
+        </div>
+        <div class="stat">
+            <h2>500+</h2>
+            <p>Regular Students</p>
+        </div>
+        <div class="stat">
+            <h2>15+</h2>
+            <p>Total Courses</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <h3>Contact Details</h3>
+            <p>Email: 2002032@icte.bdu.ac.bd</p>
+            <p>Phone: +880 1321102861</p>
+            <p>Address: BDU, Bangladesh</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <h3>Support & Services</h3>
+            <a href="#">FAQs</a>
+            <a href="#">Customer Support</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        © 2025 Parina Kicchu. All Rights Reserved.
     </div>
 </body>
 </html>
