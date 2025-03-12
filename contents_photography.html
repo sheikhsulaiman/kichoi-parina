@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f59e0b;
+        }
+        .subtext {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .topic {
+            background: #fde68a;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .topic h3 {
+            color: #d97706;
+            font-size: 1.3rem;
+        }
+        .topic p {
+            color: #444;
+        }
+        .topic a {
+            color: #d97706;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .topic a:hover {
+            color: #b45309;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video {
+            width: 100%;
+            max-width: 400px;
+        }
+        .upload-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .upload-section input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Photography Learning</div>
+    <p class="subtext">Capture stunning moments with your camera and enhance your photography skills.</p>
+
+    <div class="container">
+        <div class="topic">
+            <h3>Introduction to Photography: Understanding Your Camera</h3>
+            <p>Learn how cameras work and the fundamentals of photography.</p>
+            <a href="https://www.photographytalk.com/beginner-photography-tutorials" target="_blank">Beginner’s Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Exposure Triangle: Shutter Speed, Aperture, and ISO</h3>
+            <p>Master exposure settings to take well-lit photos.</p>
+            <a href="https://photographylife.com/what-is-exposure-triangle" target="_blank">Exposure Triangle Explained</a>
+        </div>
+
+        <div class="topic">
+            <h3>Composition Techniques & Framing the Shot</h3>
+            <p>Understand composition rules to create visually appealing images.</p>
+            <a href="https://expertphotography.com/composition-rules/" target="_blank">Photography Composition Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Lighting in Photography: Natural and Studio Lighting</h3>
+            <p>Explore different lighting techniques to enhance your photography.</p>
+            <a href="https://photographylife.com/lighting-tips" target="_blank">Photography Lighting Tips</a>
+        </div>
+
+        <div class="topic">
+            <h3>Portrait Photography & Depth of Field</h3>
+            <p>Capture stunning portraits and master depth of field techniques.</p>
+            <a href="https://www.nikonusa.com/learn-and-explore/photography-techniques/portrait-photography" target="_blank">Portrait Photography Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Post-Processing: Editing with Lightroom & Photoshop</h3>
+            <p>Enhance your photos with professional editing software.</p>
+            <a href="https://www.adobe.com/products/photoshop-lightroom.html" target="_blank">Lightroom & Photoshop</a>
+        </div>
+
+        <div class="topic">
+            <h3>Building Your Photography Portfolio & Freelancing Tips</h3>
+            <p>Learn how to create a strong portfolio and earn as a photographer.</p>
+            <a href="https://www.pixpa.com/blog/how-to-make-a-photography-portfolio" target="_blank">Build a Photography Portfolio</a>
+        </div>
+
+        <h3 style="color:#d97706; margin-top: 30px;">Video Tutorials</h3>
+        <div class="video-container">
+            <iframe class="video" src="https://www.youtube.com/embed/YjvNZVvhyeg" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/VNYsZMqewqA" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload Your Own Learning Material</h3>
+            <input type="file" id="uploadFile" accept="image/*,video/*,pdf">
+            <p id="uploadMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("uploadFile").addEventListener("change", function() {
+            document.getElementById("uploadMessage").innerText = "File uploaded successfully!";
+        });
+    </script>
+</body>
+</html>
