@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        .subtext {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .topic {
+            background: #e0e7ff;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .topic h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+        }
+        .topic p {
+            color: #444;
+        }
+        .topic a {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .topic a:hover {
+            color: #1d4ed8;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video {
+            width: 100%;
+            max-width: 400px;
+        }
+        .upload-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .upload-section input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Video Editing Learning</div>
+    <p class="subtext">Master video editing with step-by-step guides and tutorials.</p>
+
+    <div class="container">
+        <div class="topic">
+            <h3>Introduction to Video Editing</h3>
+            <p>Learn the basics of video editing, software options, and workflow.</p>
+            <a href="https://www.premiumbeat.com/blog/video-editing-basics/" target="_blank">Read More</a>
+        </div>
+
+        <div class="topic">
+            <h3>Understanding Video Formats & Codecs</h3>
+            <p>Explore different video formats, compression techniques, and best codecs.</p>
+            <a href="https://www.adobe.com/creativecloud/video/video-codecs-formats.html" target="_blank">Learn More</a>
+        </div>
+
+        <div class="topic">
+            <h3>Basic Editing Techniques in Premiere Pro</h3>
+            <p>Discover trimming, cutting, layering, and basic transitions in Premiere Pro.</p>
+            <a href="https://helpx.adobe.com/premiere-pro/tutorials.html" target="_blank">Adobe Tutorials</a>
+        </div>
+
+        <div class="topic">
+            <h3>Adding Effects & Transitions</h3>
+            <p>Make your videos more engaging by adding smooth transitions and effects.</p>
+            <a href="https://www.premiumbeat.com/blog/premiere-pro-transitions/" target="_blank">Premiere Transitions</a>
+        </div>
+
+        <div class="topic">
+            <h3>Color Correction & Grading</h3>
+            <p>Adjust brightness, contrast, and color balance for professional-looking videos.</p>
+            <a href="https://www.colorgradingcentral.com/" target="_blank">Color Grading Central</a>
+        </div>
+
+        <div class="topic">
+            <h3>Motion Graphics & After Effects</h3>
+            <p>Learn how to create animated titles, intros, and motion effects using After Effects.</p>
+            <a href="https://www.adobe.com/products/aftereffects.html" target="_blank">Explore After Effects</a>
+        </div>
+
+        <div class="topic">
+            <h3>Exporting & Finalizing Projects</h3>
+            <p>Discover the best export settings for YouTube, social media, and high-quality output.</p>
+            <a href="https://www.premiumbeat.com/blog/best-export-settings-premiere-pro/" target="_blank">Best Export Settings</a>
+        </div>
+
+        <h3 style="color:#2563eb; margin-top: 30px;">Video Tutorials</h3>
+        <div class="video-container">
+            <iframe class="video" src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/wlxF5q0jLTc" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload Your Own Learning Video</h3>
+            <input type="file" id="videoUpload" accept="video/*">
+            <p id="uploadMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("videoUpload").addEventListener("change", function() {
+            document.getElementById("uploadMessage").innerText = "Video uploaded successfully!";
+        });
+    </script>
+</body>
+</html>
