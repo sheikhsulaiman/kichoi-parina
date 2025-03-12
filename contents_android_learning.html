@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #34d399;
+        }
+        .subtext {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .topic {
+            background: #d1fae5;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .topic h3 {
+            color: #059669;
+            font-size: 1.3rem;
+        }
+        .topic p {
+            color: #444;
+        }
+        .topic a {
+            color: #059669;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .topic a:hover {
+            color: #047857;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video {
+            width: 100%;
+            max-width: 400px;
+        }
+        .upload-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .upload-section input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Android Learning</div>
+    <p class="subtext">Start your journey to becoming an Android Developer.</p>
+
+    <div class="container">
+        <div class="topic">
+            <h3>Introduction to Android Development</h3>
+            <p>Learn the basics of Android development and how apps work.</p>
+            <a href="https://developer.android.com/guide" target="_blank">Android Developer Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Setting Up Android Studio & Development Environment</h3>
+            <p>Learn how to install and configure Android Studio.</p>
+            <a href="https://developer.android.com/studio/install" target="_blank">Android Studio Setup</a>
+        </div>
+
+        <div class="topic">
+            <h3>Understanding Java and Kotlin for Android</h3>
+            <p>Explore Java and Kotlin, the core languages for Android development.</p>
+            <a href="https://developer.android.com/kotlin" target="_blank">Learn Kotlin for Android</a>
+        </div>
+
+        <div class="topic">
+            <h3>Creating User Interfaces with XML</h3>
+            <p>Understand how to design UI using XML in Android Studio.</p>
+            <a href="https://developer.android.com/develop/ui" target="_blank">UI Design Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Working with APIs & Networking in Android</h3>
+            <p>Learn how to fetch data from APIs and integrate them into your apps.</p>
+            <a href="https://developer.android.com/training/volley" target="_blank">API & Networking Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Building and Debugging Android Apps</h3>
+            <p>Understand debugging techniques and best practices.</p>
+            <a href="https://developer.android.com/studio/debug" target="_blank">Debugging Guide</a>
+        </div>
+
+        <div class="topic">
+            <h3>Publishing Your App to Google Play</h3>
+            <p>Learn how to prepare and publish your app on Google Play.</p>
+            <a href="https://developer.android.com/distribute/google-play" target="_blank">Google Play Publishing Guide</a>
+        </div>
+
+        <h3 style="color:#059669; margin-top: 30px;">Video Tutorials</h3>
+        <div class="video-container">
+            <iframe class="video" src="https://www.youtube.com/embed/fis26HvvDII" frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/mXjZQX3UzOs" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload Your Own Learning Material</h3>
+            <input type="file" id="uploadFile" accept="image/*,video/*,pdf">
+            <p id="uploadMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("uploadFile").addEventListener("change", function() {
+            document.getElementById("uploadMessage").innerText = "File uploaded successfully!";
+        });
+    </script>
+</body>
+</html>
