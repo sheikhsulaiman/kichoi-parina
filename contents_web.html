@@ -7,59 +7,67 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: #e2e8f0;
             text-align: center;
             margin: 0;
             padding: 20px;
         }
         .header {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #2563eb;
+            color: #38bdf8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .subtext {
-            color: #6b7280;
+            color: #94a3b8;
             margin-top: 5px;
         }
         .container {
             max-width: 900px;
             margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .topics {
             text-align: left;
             margin-top: 20px;
         }
         .topics h3 {
-            color: #2563eb;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 5px;
+            color: #38bdf8;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 8px;
         }
         .topics ul {
             list-style: none;
             padding: 0;
         }
         .topics li {
-            background: #e0e7ff;
-            margin: 10px 0;
+            background: #334155;
+            margin: 12px 0;
             padding: 15px;
-            border-radius: 5px;
-            color: #111827;
+            border-radius: 8px;
+            color: #e2e8f0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .topics li:hover {
+            background: #475569;
+            transform: scale(1.02);
         }
         .topics a {
             text-decoration: none;
-            color: #2563eb;
+            color: #38bdf8;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
         .topics a:hover {
-            color: #1d4ed8;
+            color: #7dd3fc;
         }
     </style>
 </head>
