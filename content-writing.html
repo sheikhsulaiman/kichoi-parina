@@ -7,19 +7,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Main page color scheme */
             text-align: center;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden;
         }
         .header {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #2563eb;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .subtext {
-            color: #6b7280;
+            color: white;
             margin-top: 5px;
+            font-size: 1.2rem;
         }
         .container {
             max-width: 800px;
@@ -27,7 +30,12 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
         .course-title {
             font-size: 1.8rem;
@@ -43,7 +51,7 @@
             margin-top: 20px;
         }
         .syllabus h3 {
-            color: #2563eb;
+            color: #ff758c; /* Main color used in syllabus section */
             font-size: 1.2rem;
         }
         .syllabus ul {
@@ -51,24 +59,29 @@
             padding: 0;
         }
         .syllabus li {
-            background: #e0e7ff;
+            background: #ffdde1; /* Subtle background for list items */
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
             color: #111827;
         }
+        .syllabus li:hover {
+            background: #ffb3c1; /* Hover effect with a softer shade */
+            transform: scale(1.05);
+        }
         .button {
             margin-top: 20px;
             padding: 12px 20px;
-            background-color: #2563eb;
+            background: linear-gradient(to right, #ff758c, #ff7eb3); /* Main button color gradient */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
+            transition: 0.3s;
         }
         .button:hover {
-            background-color: #1d4ed8;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
         }
     </style>
 </head>
