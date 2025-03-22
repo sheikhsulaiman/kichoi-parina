@@ -7,49 +7,56 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
             text-align: center;
             margin: 0;
             padding: 20px;
+            color: white;
         }
         .header {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #2563eb;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
         .subtext {
-            color: #6b7280;
             margin-top: 5px;
+            font-size: 1.2rem;
         }
         .container {
             max-width: 900px;
             margin: 30px auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: left;
+            backdrop-filter: blur(10px);
         }
         .topic {
-            background: #e0e7ff;
+            background: rgba(255, 255, 255, 0.2);
             margin: 15px 0;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .topic:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
         }
         .topic h3 {
-            color: #2563eb;
-            font-size: 1.3rem;
+            color: #fffbeb;
+            font-size: 1.5rem;
         }
         .topic p {
-            color: #444;
+            color: #e5e7eb;
         }
         .topic a {
-            color: #2563eb;
+            color: #ffcc00;
             font-weight: bold;
             text-decoration: none;
         }
         .topic a:hover {
-            color: #1d4ed8;
+            text-decoration: underline;
         }
         .video-container {
             display: flex;
@@ -61,6 +68,8 @@
         .video {
             width: 100%;
             max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .upload-section {
             margin-top: 30px;
@@ -69,6 +78,18 @@
         .upload-section input {
             padding: 10px;
             margin-top: 10px;
+            background: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .upload-section input:hover {
+            background: #e6b800;
+        }
+        #uploadMessage {
+            margin-top: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -119,7 +140,7 @@
             <a href="https://www.premiumbeat.com/blog/best-export-settings-premiere-pro/" target="_blank">Best Export Settings</a>
         </div>
 
-        <h3 style="color:#2563eb; margin-top: 30px;">Video Tutorials</h3>
+        <h3 style="color:#ffcc00; margin-top: 30px;">Video Tutorials</h3>
         <div class="video-container">
             <iframe class="video" src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0" allowfullscreen></iframe>
             <iframe class="video" src="https://www.youtube.com/embed/wlxF5q0jLTc" frameborder="0" allowfullscreen></iframe>

@@ -7,35 +7,37 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
             text-align: center;
             margin: 0;
             padding: 20px;
         }
-        .header {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2563eb;
-        }
-        .subtext {
-            color: #6b7280;
-            margin-top: 5px;
-        }
         .container {
             max-width: 800px;
             margin: 30px auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .header {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .subtext {
+            color: #dbeafe;
+            margin-top: 5px;
         }
         .course-title {
             font-size: 1.8rem;
-            color: #111827;
+            color: #facc15;
             margin-bottom: 10px;
         }
         .description {
-            color: #6b7280;
+            color: #f9fafb;
             margin-bottom: 20px;
         }
         .syllabus {
@@ -43,32 +45,43 @@
             margin-top: 20px;
         }
         .syllabus h3 {
-            color: #2563eb;
-            font-size: 1.2rem;
+            color: #facc15;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #facc15;
+            padding-bottom: 5px;
         }
         .syllabus ul {
             list-style: none;
             padding: 0;
         }
         .syllabus li {
-            background: #e0e7ff;
-            margin: 5px 0;
-            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 8px 0;
+            padding: 12px;
             border-radius: 5px;
-            color: #111827;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .syllabus li:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
         }
         .button {
             margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #2563eb;
-            color: white;
+            padding: 14px 24px;
+            background: #facc15;
+            color: #1e3a8a;
+            font-weight: bold;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease-in-out;
         }
         .button:hover {
-            background-color: #1d4ed8;
+            background: #fde047;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -95,7 +108,6 @@
             </ul>
         </div>
 
-        
         <button class="button" onclick="window.location.href='contents_video_editing.html'">Get Started</button>
     </div>
 </body>
