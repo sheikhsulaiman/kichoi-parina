@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Parina Kicchu</title>
+    <link rel="icon" type="image/x-icon" href="image/parinakicchufav.ico">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -278,6 +281,32 @@
     border: 1px solid #ddd;
 }
 
+.logo {
+    display: flex;
+    align-items: center; /* Ensures the logo and text are aligned in a row */
+    
+}
+
+.logo a {
+    display: flex;
+    align-items: center; /* Keeps the image and text aligned horizontally */
+    text-decoration: none; /* Removes the underline */
+}
+
+.logo img {
+    height: 40px; /* Adjust based on your design */
+    width: auto;
+    display: block;
+    margin-right: 10px; /* Adds space between the image and text */
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; /* Adjust as needed */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
     </style>
     <script>
         function exploreCourse(course) {
@@ -321,7 +350,13 @@ function filterCourses() {
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">Parina Kicchu</div>
+        <div class="logo">
+            <a href="main.html">
+                <img src="image/Parina Kicchu_logo.png" alt="Parina Kicchu Logo">
+                <span>Parina Kicchu</span>
+            </a>
+            
+        </div>
         <ul>
             <li><a href="main.html">Home</a></li>
             <li><a href="#">Courses</a></li>
@@ -340,7 +375,7 @@ function filterCourses() {
             <button class="cta-button" onclick="scrollToCourses()">Start Learning Now</button>
         </div>
         <div class="hero-image">
-            <img src="Parina Kicchu.png" alt="Learning illustration">
+            <img src="image/Parina Kicchu.png" alt="Learning illustration">
         </div>
     </section>
 
