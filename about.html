@@ -284,6 +284,79 @@ footer .copyright {
     white-space: nowrap; /* Prevents text from wrapping */
 }
 
+.team {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC); /* Vibrant pastel gradient */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Glowing hover effect */
+}
+
+    .team h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .team p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .team-members {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .team-member {
+        width: 250px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .team-member img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #333;
+    }
+
+    .team-member p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+.team-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-image:hover {
+  transform: scale(1.1);
+}
+
 
 
 
@@ -318,6 +391,10 @@ footer .copyright {
     <section class="mission">
         <h2>Our Mission</h2>
         <p>Parina Kicchu aims to help students explore their passions by providing structured learning paths in various fields such as Web Development, Video Editing, and Graphic Design.</p>
+        <p>Parina Kicchu is an educational platform designed to help students find their ideal learning paths.  
+            We provide structured courses in various fields, from technology to creativity, empowering learners  
+            with real-world skills. The platform is developed by Siyam Ul Alam, Jalal Uddin Borno, and Sheikh Sulaiman Sony,  
+            who are passionate about making education accessible and engaging.</p>
     </section>
 
     <section class="why-choose">
@@ -337,6 +414,30 @@ footer .copyright {
             </div>
         </div>
     </section>
+
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <p>We are a passionate team dedicated to providing the best educational experiences through Parina Kicchu.</p>
+        
+        <div class="team-members">
+            <div class="team-member">
+                <img src="image/siyam.png" alt="Siyam Ul Alam" class="team-image">
+                <h3>Siyam Ul Alam</h3>
+                <p>Student, Department of Educational Technology and Engineering, Bangladesh Digital University</p>
+            </div>
+            <div class="team-member">
+                <img src="image/borno.png" alt="Jalal Uddin Borno" class="team-image">
+                <h3>Jalal Uddin Borno</h3>
+                <p>Student, Department of Educational Technology and Engineering, Bangladesh Digital University</p>
+            </div>
+            <div class="team-member">
+                <img src="image/sony.png" alt="Sheikh Sulaiman Sony" class="team-image">
+                <h3>Sheikh Sulaiman Sony</h3>
+                <p>Student, Department of Educational Technology and Engineering, Bangladesh Digital University</p>
+            </div>
+        </div>
+    </section>
+    
 
     <section class="cta">
         <h2>Ready to Start Learning?</h2>
