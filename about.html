@@ -1,453 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About Us | Parina Kicchu</title>
-    <link rel="icon" type="image/x-icon" href="image/parinakicchufav.ico">
+    <link rel="icon" type="image/x-icon" href="image/parinakicchufav.ico" />
+  </head>
 
-</head>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-    function revealMission() {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function revealMission() {
         let missionSection = document.querySelector(".mission");
         let sectionTop = missionSection.getBoundingClientRect().top;
         let windowHeight = window.innerHeight;
 
         if (sectionTop < windowHeight - 100) {
-            missionSection.classList.add("show");
+          missionSection.classList.add("show");
         }
+      }
+
+      window.addEventListener("scroll", revealMission);
+      revealMission(); // Trigger on page load
+    });
+  </script>
+
+  <style>
+    /* General Styling */
+    body {
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(
+        to right,
+        #ff9a9e,
+        #fad0c4
+      ); /* Soft gradient background */
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
     }
 
-    window.addEventListener("scroll", revealMission);
-    revealMission(); // Trigger on page load
-});
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5px;
+      background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px); /* Blurred background effect */
+    }
 
-</script>
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
 
-<style>
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft gradient background */
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    overflow-x: hidden;
-}
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px; /* Increased spacing between menu items */
+      margin: 0;
+      padding: 0;
+    }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5px;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px); /* Blurred background effect */
-}
+    .navbar ul li {
+      display: inline-block;
+    }
 
-.navbar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    
-}
+    .navbar ul li a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px; /* Added padding to increase click area */
+      transition: 0.3s;
+    }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Increased spacing between menu items */
-    margin: 0;
-    padding: 0;
-}
+    .navbar ul li a:hover {
+      color: #ffdd57; /* Hover effect */
+    }
 
-.navbar ul li {
-    display: inline-block;
-}
+    .navbar ul li a.active {
+      color: #ffdd57;
+      text-shadow: 0px 0px 10px rgba(255, 221, 87, 0.8);
+    }
 
-.navbar ul li a {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px; /* Added padding to increase click area */
-    transition: 0.3s;
-}
+    /* Hero Section */
+    .hero-about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 80px 10%;
+      background: linear-gradient(
+        to right,
+        #ff758c,
+        #ff7eb3
+      ); /* Gradient background */
+      color: white;
+      text-align: left;
+      margin-top: 60px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.navbar ul li a:hover {
-    color: #ffdd57; /* Hover effect */
-}
+    .hero-about h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
 
-.navbar ul li a.active {
-    color: #ffdd57;
-    text-shadow: 0px 0px 10px rgba(255, 221, 87, 0.8);
-}
+    .hero-about p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
 
+    .hero-about:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
 
+    /* Sections */
+    section {
+      padding: 60px 20px;
+    }
 
+    /* Mission Section */
+    .mission {
+      background: linear-gradient(
+        to right,
+        #ffafcc,
+        #d4c1fc
+      ); /* Soft pink to light purple gradient */
+      padding: 80px 10%; /* Adjust padding for better spacing */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow effect */
+      text-align: center;
+      color: #333; /* Darker text for better readability */
+      margin-top: 50px; /* Adds space above the section */
+    }
 
-/* Hero Section */
-.hero-about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 80px 10%;
-    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Gradient background */
-    color: white;
-    text-align: left;
-    margin-top: 60px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .mission h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #222; /* Darker heading color */
+    }
 
-.hero-about h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+    .mission p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-.hero-about p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
+    .mission {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
 
-.hero-about:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
+    /* When the section is visible, apply these styles */
+    .mission.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-}
+    /* Hover effect */
+    .mission:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Mission Section */
-.mission {
-    background: linear-gradient(to right, #ffafcc, #d4c1fc); /* Soft pink to light purple gradient */
-    padding: 80px 10%; /* Adjust padding for better spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow effect */
-    text-align: center;
-    color: #333; /* Darker text for better readability */
-    margin-top: 50px; /* Adds space above the section */
-}
+    /* Why Choose Us */
+    .why-choose .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
 
-.mission h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #222; /* Darker heading color */
-}
+    .feature {
+      background: linear-gradient(
+        to right,
+        #ff9a9e,
+        #fad0c4
+      ); /* Soft Pink Gradient */
+      padding: 20px;
+      border-radius: 10px;
+      width: 30%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow for better depth */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #fff; /* White text for contrast */
+      text-align: center;
+    }
 
-.mission p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
+    /* Hover Effect */
+    .feature:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    }
 
-.mission {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+    .feature:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.3);
+    }
 
-/* When the section is visible, apply these styles */
-.mission.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+    /* CTA */
+    .cta {
+      background: rgba(0, 0, 0, 0.7); /* Darkened CTA background */
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
 
-/* Hover effect */
-.mission:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .cta h2 {
+      color: white;
+      font-size: 2rem;
+    }
 
+    .cta .btn {
+      background: linear-gradient(
+        to right,
+        #ff758c,
+        #ff7eb3
+      ); /* Gradient button */
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 1rem;
+      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+    }
 
-/* Why Choose Us */
-.why-choose .features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
+    .cta .btn:hover {
+      background: linear-gradient(
+        to right,
+        #ff7eb3,
+        #ff758c
+      ); /* Inverse gradient on hover */
+    }
 
-.feature {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft Pink Gradient */
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow for better depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff; /* White text for contrast */
-    text-align: center;
-}
+    /* Footer */
+    footer {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
 
-/* Hover Effect */
-.feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
+    footer a {
+      color: #ffdd57; /* Golden links */
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
+    footer a:hover {
+      color: white;
+    }
 
-.feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.3);
-}
+    footer .copyright {
+      text-align: center;
+      background: black;
+      color: white;
+      padding: 15px;
+    }
 
-/* CTA */
-.cta {
-    background: rgba(0, 0, 0, 0.7); /* Darkened CTA background */
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
+    .logo {
+      display: flex;
+      align-items: center; /* Ensures the logo and text are aligned in a row */
+    }
 
-.cta h2 {
-    color: white;
-    font-size: 2rem;
-}
+    .logo a {
+      display: flex;
+      align-items: center; /* Keeps the image and text aligned horizontally */
+      text-decoration: none; /* Removes the underline */
+    }
 
-.cta .btn {
-    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Gradient button */
-    color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 1rem;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
-}
+    .logo img {
+      height: 40px; /* Adjust based on your design */
+      width: auto;
+      display: block;
+      margin-right: 10px; /* Adds space between the image and text */
+    }
 
-.cta .btn:hover {
-    background: linear-gradient(to right, #ff7eb3, #ff758c); /* Inverse gradient on hover */
-}
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white; /* Adjust as needed */
+      white-space: nowrap; /* Prevents text from wrapping */
+    }
 
-/* Footer */
-footer {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-}
+    .team {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        #ffdee9,
+        #b5fffc
+      ); /* Vibrant pastel gradient */
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-footer a {
-    color: #ffdd57; /* Golden links */
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-footer a:hover {
-    color: white;
-}
-
-footer .copyright {
-    text-align: center;
-    background: black;
-    color: white;
-    padding: 15px;
-}
-
-.logo {
-    display: flex;
-    align-items: center; /* Ensures the logo and text are aligned in a row */
-    
-}
-
-.logo a {
-    display: flex;
-    align-items: center; /* Keeps the image and text aligned horizontally */
-    text-decoration: none; /* Removes the underline */
-}
-
-.logo img {
-    height: 40px; /* Adjust based on your design */
-    width: auto;
-    display: block;
-    margin-right: 10px; /* Adds space between the image and text */
-}
-
-.logo span {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white; /* Adjust as needed */
-    white-space: nowrap; /* Prevents text from wrapping */
-}
-
-.team {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #FFDEE9, #B5FFFC); /* Vibrant pastel gradient */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-
-.team:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Glowing hover effect */
-}
+    .team:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Glowing hover effect */
+    }
 
     .team h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 15px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
     }
 
     .team p {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 30px;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
     }
 
     .team-members {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     .team-member {
-        width: 250px;
-        text-align: center;
-        margin-bottom: 30px;
+      width: 250px;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     .team-member img {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .team-member h3 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-top: 15px;
-        color: #333;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 15px;
+      color: #333;
     }
 
     .team-member p {
-        font-size: 1rem;
-        color: #555;
+      font-size: 1rem;
+      color: #555;
     }
 
-.team-image {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-}
+    .team-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+    }
 
-.team-image:hover {
-  transform: scale(1.1);
-}
+    .team-image:hover {
+      transform: scale(1.1);
+    }
+  </style>
 
-
-
-
-</style>
-
-<body>
-
+  <body>
     <header class="navbar">
-        <div class="logo">
-            <a href="main.html">
-                <img src="image/Parina Kicchu_logo.png" alt="Parina Kicchu Logo">
-                <span>Parina Kicchu</span>
-            </a>
-            
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="main.html">
+          <img src="image/Parina Kicchu_logo.png" alt="Parina Kicchu Logo" />
+          <span>Parina Kicchu</span>
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero-about">
-        <h1>About Parina Kicchu</h1>
-        <p>Your Gateway to Structured Learning & Career Growth.</p>
+      <h1>About Parina Kicchu</h1>
+      <p>Your Gateway to Structured Learning & Career Growth.</p>
     </section>
 
     <section class="mission">
-        <h2>Our Mission</h2>
-        <p>Parina Kicchu aims to help students explore their passions by providing structured learning paths in various fields such as Web Development, Video Editing, and Graphic Design.</p>
-        <p>Parina Kicchu is an educational platform designed to help students find their ideal learning paths.  
-            We provide structured courses in various fields, from technology to creativity, empowering learners  
-            with real-world skills. The platform is developed by Siyam Ul Alam, Jalal Uddin Borno, and Sheikh Sulaiman Sony,  
-            who are passionate about making education accessible and engaging.</p>
+      <h2>Our Mission</h2>
+      <p>
+        Parina Kicchu aims to help students explore their passions by providing
+        structured learning paths in various fields such as Web Development,
+        Video Editing, and Graphic Design.
+      </p>
+      <p>
+        Parina Kicchu is an educational platform designed to help students find
+        their ideal learning paths. We provide structured courses in various
+        fields, from technology to creativity, empowering learners with
+        real-world skills. The platform is developed by Siyam Ul Alam, Jalal
+        Uddin Borno, and Sheikh Sulaiman Sony, who are passionate about making
+        education accessible and engaging.
+      </p>
     </section>
 
     <section class="why-choose">
-        <h2>Why Choose Us?</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>📚 Structured Learning</h3>
-                <p>Step-by-step courses designed for beginners to experts.</p>
-            </div>
-            <div class="feature">
-                <h3>🎥 Interactive Content</h3>
-                <p>Engaging video lessons, quizzes, and assignments.</p>
-            </div>
-            <div class="feature">
-                <h3>🎓 Career Guidance</h3>
-                <p>Helping students build skills that align with career goals.</p>
-            </div>
+      <h2>Why Choose Us?</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>📚 Structured Learning</h3>
+          <p>Step-by-step courses designed for beginners to experts.</p>
         </div>
+        <div class="feature">
+          <h3>🎥 Interactive Content</h3>
+          <p>Engaging video lessons, quizzes, and assignments.</p>
+        </div>
+        <div class="feature">
+          <h3>🎓 Career Guidance</h3>
+          <p>Helping students build skills that align with career goals.</p>
+        </div>
+      </div>
     </section>
 
     <section class="team">
-        <h2>Meet Our Team</h2>
-        <p>We are a passionate team dedicated to providing the best educational experiences through Parina Kicchu.</p>
-        
-        <div class="team-members">
-            <div class="team-member">
-                <img src="image/siyam.png" alt="Siyam Ul Alam" class="team-image">
-                <h3>Siyam Ul Alam</h3>
-                <p>Student, Department of Educational Technology and Engineering, Bangladesh Digital University</p>
-            </div>
-            <div class="team-member">
-                <img src="image/borno.png" alt="Jalal Uddin Borno" class="team-image">
-                <h3>Jalal Uddin Borno</h3>
-                <p>Student, Department of Educational Technology and Engineering, Bangladesh Digital University</p>
-            </div>
-            <div class="team-member">
-                <img src="image/sony.png" alt="Sheikh Sulaiman Sony" class="team-image">
-                <h3>Sheikh Sulaiman Sony</h3>
-                <p>Student, Department of Educational Technology and Engineering, Bangladesh Digital University</p>
-            </div>
+      <h2>Meet Our Team</h2>
+      <p>
+        We are a passionate team dedicated to providing the best educational
+        experiences through Parina Kicchu.
+      </p>
+
+      <div class="team-members">
+        <div class="team-member">
+          <img src="image/siyam.png" alt="Siyam Ul Alam" class="team-image" />
+          <h3>Siyam Ul Alam</h3>
+          <p>
+            Student, Department of Educational Technology and Engineering,
+            Bangladesh Digital University
+          </p>
         </div>
+        <div class="team-member">
+          <img
+            src="image/borno.png"
+            alt="Jalal Uddin Borno"
+            class="team-image"
+          />
+          <h3>Jalal Uddin Borno</h3>
+          <p>
+            Student, Department of Educational Technology and Engineering,
+            Bangladesh Digital University
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="image/sony.png"
+            alt="Sheikh Sulaiman Sony"
+            class="team-image"
+          />
+          <h3>Sheikh Sulaiman Sony</h3>
+          <p>
+            Student, Department of Educational Technology and Engineering,
+            Bangladesh Digital University
+          </p>
+        </div>
+      </div>
     </section>
-    
 
     <section class="cta">
-        <h2>Ready to Start Learning?</h2>
-        <a href="courses.html" class="btn">Explore Courses</a>
-
+      <h2>Ready to Start Learning?</h2>
+      <a href="courses.html" class="btn">Explore Courses</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Parina Kicchu. All rights reserved.</p>
+      <p>&copy; 2025 Parina Kicchu. All rights reserved.</p>
     </footer>
-
-</body>
+  </body>
 </html>
