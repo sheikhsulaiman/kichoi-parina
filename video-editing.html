@@ -5,39 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Editing Course - Parina Kicchu</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Original color scheme */
             text-align: center;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden;
+        }
+        .header {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .subtext {
+            color: white;
+            margin-top: 5px;
+            font-size: 1.2rem;
         }
         .container {
             max-width: 800px;
             margin: 30px auto;
-            background: rgba(255, 255, 255, 0.1);
+            background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .header {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #ffffff;
-        }
-        .subtext {
-            color: #dbeafe;
-            margin-top: 5px;
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
         .course-title {
             font-size: 1.8rem;
-            color: #facc15;
+            color: #111827;
             margin-bottom: 10px;
         }
         .description {
-            color: #f9fafb;
+            color: #6b7280;
             margin-bottom: 20px;
         }
         .syllabus {
@@ -45,42 +51,42 @@
             margin-top: 20px;
         }
         .syllabus h3 {
-            color: #facc15;
-            font-size: 1.3rem;
-            border-bottom: 2px solid #facc15;
-            padding-bottom: 5px;
+            color: #ff758c; /* Color used in syllabus section */
+            font-size: 1.2rem;
         }
         .syllabus ul {
             list-style: none;
             padding: 0;
         }
         .syllabus li {
-            background: rgba(255, 255, 255, 0.2);
-            margin: 8px 0;
+            background: #ffdde1; /* Subtle background for list items */
+            margin: 5px 0;
             padding: 12px;
             border-radius: 5px;
-            color: white;
             font-weight: bold;
-            transition: transform 0.3s ease-in-out;
+            color: #111827;
+            transition: transform 0.3s ease;
         }
         .syllabus li:hover {
+            background: #ffb3c1; /* Hover effect with a softer shade */
             transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.3);
+            color: white;
         }
         .button {
             margin-top: 20px;
-            padding: 14px 24px;
-            background: #facc15;
-            color: #1e3a8a;
-            font-weight: bold;
+            padding: 12px 20px;
+            background: linear-gradient(to right, #ff758c, #ff7eb3); /* Button color gradient */
+            color: white;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1.1rem;
-            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .button:hover {
-            background: #fde047;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
             transform: scale(1.1);
         }
     </style>
