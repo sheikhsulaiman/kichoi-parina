@@ -14,11 +14,15 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Generate Firebase Config File
+      # Step 2: Create Public Directory
+      - name: Ensure Public Directory Exists
+        run: mkdir -p public
+
+      # Step 3: Generate Firebase Config File
       - name: Create Firebase Config File
         run: echo '${{ secrets.FIREBASE_CONFIG }}' > public/firebaseConfig.json
 
-      # Step 3: Deploy to GitHub Pages
+      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
