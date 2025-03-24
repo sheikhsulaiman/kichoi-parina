@@ -82,7 +82,7 @@
         background: white;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.6s ease, box-shadow 0.6s ease,  color .6s ease; /* Adds a smooth transition to all properties */
+        transition: transform 0.6s ease, box-shadow 0.6s ease, color 0.6s ease; /* Adds a smooth transition to all properties */
       }
 
       .contact-section h2 {
@@ -91,12 +91,15 @@
         color: #333;
       }
       .contact-section:hover {
-    transform: translateY(-10px); /* Slight upward movement on hover */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Bigger shadow */
-    background: linear-gradient(to right, #ff7eb3, #ff758c); /* Color transition effect */
-    color: white; /* Changes text color to white for better contrast */
-}
-
+        transform: translateY(-10px); /* Slight upward movement on hover */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Bigger shadow */
+        background: linear-gradient(
+          to right,
+          #ff7eb3,
+          #ff758c
+        ); /* Color transition effect */
+        color: white; /* Changes text color to white for better contrast */
+      }
 
       .contact-form {
         display: flex;
@@ -199,23 +202,23 @@
         white-space: nowrap; /* Prevents text from wrapping */
       }
       iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 10px;
-        }
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="navbar">
       <div class="logo">
-        <a href="main.html">
+        <a href="index.html">
           <img src="image/Parina Kicchu_logo.png" alt="Parina Kicchu Logo" />
           <span>Parina Kicchu</span>
         </a>
       </div>
       <ul>
-        <li><a href="main.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -239,12 +242,10 @@
     </section>
 
     <section class="contact-section">
-        <h2>Get in Touch</h2>
+      <h2>Get in Touch</h2>
 
-        <!-- Google Form Embed -->
-        <iframe src="https://forms.gle/ntwSw9a7QskLxeBk6">
-            Loading...
-        </iframe>
+      <!-- Google Form Embed -->
+      <iframe src="https://forms.gle/ntwSw9a7QskLxeBk6"> Loading... </iframe>
     </section>
 
     <footer class="footer">
@@ -259,7 +260,7 @@
       </div>
       <div>
         <h3>Quick Links</h3>
-        <a href="main.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="courses.html">Courses</a>
         <a href="contact.html">Contact</a>
