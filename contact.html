@@ -278,59 +278,49 @@
         addDoc,
       } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
 
-      // Fetch Firebase configuration dynamically
-      async function getFirebaseConfig() {
-        try {
-          const response = await fetch("/firebaseConfig.json"); // Point to the hosted config file in your repository
-          if (!response.ok) {
-            throw new Error("Failed to load Firebase configuration");
-          }
-          return await response.json();
-        } catch (error) {
-          console.error("Error fetching Firebase configuration:", error);
-          alert("Unable to initialize Firebase. Please try again later.");
-        }
-      }
+      // Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyClbVKTM6nru7K1rhUVAX8jEuvy0BYZBYg",
+        authDomain: "kichoi-parina.firebaseapp.com",
+        projectId: "kichoi-parina",
+        storageBucket: "kichoi-parina.firebasestorage.app",
+        messagingSenderId: "697410106039",
+        appId: "1:697410106039:web:84a1d5819d72b5734a9332",
+      };
 
       // Initialize Firebase and Firestore
-      (async () => {
-        const firebaseConfig = await getFirebaseConfig();
-        if (firebaseConfig) {
-          const app = initializeApp(firebaseConfig);
-          const db = getFirestore(app);
 
-          // Handle form submission
-          document
-            .getElementById("contactForm")
-            .addEventListener("submit", async (e) => {
-              e.preventDefault(); // Prevent page reload
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
 
-              // Collect form data
-              const name = document.getElementById("name").value;
-              const email = document.getElementById("email").value;
-              const message = document.getElementById("message").value;
+      // Handle form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent page reload
 
-              try {
-                // Add data to Firestore
-                await addDoc(collection(db, "contacts"), {
-                  name: name,
-                  email: email,
-                  message: message,
-                  timestamp: new Date(),
-                });
+          // Collect form data
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
 
-                alert("Your message has been sent!");
-                // Optionally, clear the form
-                document.getElementById("contactForm").reset();
-              } catch (error) {
-                console.error("Error adding document:", error);
-                alert(
-                  "There was an error sending your message. Please try again."
-                );
-              }
+          try {
+            // Add data to Firestore
+            await addDoc(collection(db, "contacts"), {
+              name: name,
+              email: email,
+              message: message,
+              timestamp: new Date(),
             });
-        }
-      })();
+
+            alert("Your message has been sent!");
+            // Optionally, clear the form
+            document.getElementById("contactForm").reset();
+          } catch (error) {
+            console.error("Error adding document:", error);
+            alert("There was an error sending your message. Please try again.");
+          }
+        });
     </script>
   </body>
 </html>
