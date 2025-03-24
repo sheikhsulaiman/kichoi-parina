@@ -1,166 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Graphic Design Learning</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            overflow-x: hidden;
-        }
-        .header {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        .subtext {
-            color: white;
-            margin-top: 5px;
-            font-size: 1.2rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .topic {
-            background: #fcd9e0;
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .topic:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        .topic h3 {
-            color: #ff758c;
-            font-size: 1.3rem;
-        }
-        .topic p {
-            color: #444;
-        }
-        .topic a {
-            color: #ff758c;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .topic a:hover {
-            color: #e60073;
-        }
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .video {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-        }
-        .upload-section {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .upload-section input {
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        .button {
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-        .button:hover {
-            background: linear-gradient(to right, #ff7eb3, #ff758c);
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        overflow-x: hidden;
+      }
+      .header {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      .subtext {
+        color: white;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      .topic {
+        background: #fcd9e0;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .topic:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+      .topic h3 {
+        color: #ff758c;
+        font-size: 1.3rem;
+      }
+      .topic p {
+        color: #444;
+      }
+      .topic a {
+        color: #ff758c;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .topic a:hover {
+        color: #e60073;
+      }
+      .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .video {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+      }
+      .upload-section {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .upload-section input {
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+      .button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+      .button:hover {
+        background: linear-gradient(to right, #ff7eb3, #ff758c);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">Parina Kicchu</div>
-    <p class="subtext">Master the art of visual design with structured lessons and resources.</p>
+    <p class="subtext">
+      Master the art of visual design with structured lessons and resources.
+    </p>
 
     <div class="container">
-        <div class="topic">
-            <h3>Introduction to Graphic Design</h3>
-            <p>Learn the fundamentals of graphic design and how to communicate visually.</p>
-            <a href="https://www.canva.com/learn/graphic-design-guide/" target="_blank">Read More</a>
-        </div>
+      <div class="topic">
+        <h3>Introduction to Graphic Design</h3>
+        <p>
+          Learn the fundamentals of graphic design and how to communicate
+          visually.
+        </p>
+        <a
+          href="https://www.canva.com/learn/graphic-design-guide/"
+          target="_blank"
+          >Read More</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Principles of Design & Color Theory</h3>
-            <p>Understand the basics of balance, contrast, and how colors influence emotions.</p>
-            <a href="https://99designs.com/blog/tips/design-principles/" target="_blank">Learn More</a>
-        </div>
+      <div class="topic">
+        <h3>Principles of Design & Color Theory</h3>
+        <p>
+          Understand the basics of balance, contrast, and how colors influence
+          emotions.
+        </p>
+        <a
+          href="https://99designs.com/blog/tips/design-principles/"
+          target="_blank"
+          >Learn More</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Adobe Photoshop Basics</h3>
-            <p>Learn how to edit images, create compositions, and work with layers in Photoshop.</p>
-            <a href="https://helpx.adobe.com/photoshop/tutorials.html" target="_blank">Adobe Tutorials</a>
-        </div>
+      <div class="topic">
+        <h3>Adobe Photoshop Basics</h3>
+        <p>
+          Learn how to edit images, create compositions, and work with layers in
+          Photoshop.
+        </p>
+        <a
+          href="https://helpx.adobe.com/photoshop/tutorials.html"
+          target="_blank"
+          >Adobe Tutorials</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Vector Art & Illustration with Illustrator</h3>
-            <p>Explore vector graphics, pen tool techniques, and how to create scalable designs.</p>
-            <a href="https://helpx.adobe.com/illustrator/tutorials.html" target="_blank">Illustrator Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Vector Art & Illustration with Illustrator</h3>
+        <p>
+          Explore vector graphics, pen tool techniques, and how to create
+          scalable designs.
+        </p>
+        <a
+          href="https://helpx.adobe.com/illustrator/tutorials.html"
+          target="_blank"
+          >Illustrator Guide</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Branding & Logo Design</h3>
-            <p>Learn the key concepts behind branding and designing effective logos.</p>
-            <a href="https://www.smashingmagazine.com/brand-identity/" target="_blank">Brand Identity Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Branding & Logo Design</h3>
+        <p>
+          Learn the key concepts behind branding and designing effective logos.
+        </p>
+        <a
+          href="https://www.smashingmagazine.com/brand-identity/"
+          target="_blank"
+          >Brand Identity Guide</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Typography & Layout Design</h3>
-            <p>Master font selection, spacing, and how to create visually appealing layouts.</p>
-            <a href="https://www.creativebloq.com/typography" target="_blank">Typography Basics</a>
-        </div>
+      <div class="topic">
+        <h3>Typography & Layout Design</h3>
+        <p>
+          Master font selection, spacing, and how to create visually appealing
+          layouts.
+        </p>
+        <a href="https://www.creativebloq.com/typography" target="_blank"
+          >Typography Basics</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>UI/UX Basics & Portfolio Building</h3>
-            <p>Understand the basics of user interface (UI) and user experience (UX) design.</p>
-            <a href="https://www.adobe.com/creativecloud/design/discover/ui-ux.html" target="_blank">Explore UI/UX</a>
-        </div>
+      <div class="topic">
+        <h3>UI/UX Basics & Portfolio Building</h3>
+        <p>
+          Understand the basics of user interface (UI) and user experience (UX)
+          design.
+        </p>
+        <a
+          href="https://www.adobe.com/creativecloud/design/discover/ui-ux.html"
+          target="_blank"
+          >Explore UI/UX</a
+        >
+      </div>
 
-        <h3 style="color:#ff758c; margin-top: 30px;">Video Tutorials</h3>
-        <div class="video-container">
-            <iframe class="video" src="https://www.youtube.com/embed/QxX2cd9mQXo" frameborder="0" allowfullscreen></iframe>
-            <iframe class="video" src="https://www.youtube.com/embed/kjGadNFtYck" frameborder="0" allowfullscreen></iframe>
-        </div>
+      <h3 style="color: #ff758c; margin-top: 30px; text-align: center">
+        Video Tutorials
+      </h3>
+      <div class="video-container">
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/QxX2cd9mQXo"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/kjGadNFtYck"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-        <div class="upload-section">
+      <!-- <div class="upload-section">
             <h3>Upload Your Own Learning Material</h3>
             <input type="file" id="uploadFile" accept="image/*,video/*,pdf">
             <p id="uploadMessage"></p>
-        </div>
+        </div> -->
     </div>
 
     <script>
-        document.getElementById("uploadFile").addEventListener("change", function() {
-            document.getElementById("uploadMessage").innerText = "File uploaded successfully!";
+      document
+        .getElementById("uploadFile")
+        .addEventListener("change", function () {
+          document.getElementById("uploadMessage").innerText =
+            "File uploaded successfully!";
         });
     </script>
-</body>
+  </body>
 </html>

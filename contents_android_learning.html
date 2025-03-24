@@ -1,178 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Android Learning</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Main page color scheme */
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            overflow-x: hidden;
-        }
-        .header {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        .subtext {
-            color: white;
-            margin-top: 5px;
-            font-size: 1.2rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .topic {
-            background: #ffdde1;
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .topic h3 {
-            color: #ff758c;
-            font-size: 1.3rem;
-        }
-        .topic p {
-            color: #444;
-        }
-        .topic a {
-            color: #ff758c;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .topic a:hover {
-            color: #ff7eb3;
-        }
-        .topic:hover {
-            transform: scale(1.05);
-        }
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .video {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .video:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .upload-section {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .upload-section input {
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .button {
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-        .button:hover {
-            background: linear-gradient(to right, #ff7eb3, #ff758c);
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          to right,
+          #ff9a9e,
+          #fad0c4
+        ); /* Main page color scheme */
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        overflow-x: hidden;
+      }
+      .header {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      .subtext {
+        color: white;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+      .topic {
+        background: #ffdde1;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+      .topic h3 {
+        color: #ff758c;
+        font-size: 1.3rem;
+      }
+      .topic p {
+        color: #444;
+      }
+      .topic a {
+        color: #ff758c;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .topic a:hover {
+        color: #ff7eb3;
+      }
+      .topic:hover {
+        transform: scale(1.05);
+      }
+      .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .video {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .video:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+      .upload-section {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .upload-section input {
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+      .button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+      .button:hover {
+        background: linear-gradient(to right, #ff7eb3, #ff758c);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">Android Learning</div>
     <p class="subtext">Start your journey to becoming an Android Developer.</p>
 
     <div class="container">
-        <div class="topic">
-            <h3>Introduction to Android Development</h3>
-            <p>Learn the basics of Android development and how apps work.</p>
-            <a href="https://developer.android.com/guide" target="_blank">Android Developer Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Introduction to Android Development</h3>
+        <p>Learn the basics of Android development and how apps work.</p>
+        <a href="https://developer.android.com/guide" target="_blank"
+          >Android Developer Guide</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Setting Up Android Studio & Development Environment</h3>
-            <p>Learn how to install and configure Android Studio.</p>
-            <a href="https://developer.android.com/studio/install" target="_blank">Android Studio Setup</a>
-        </div>
+      <div class="topic">
+        <h3>Setting Up Android Studio & Development Environment</h3>
+        <p>Learn how to install and configure Android Studio.</p>
+        <a href="https://developer.android.com/studio/install" target="_blank"
+          >Android Studio Setup</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Understanding Java and Kotlin for Android</h3>
-            <p>Explore Java and Kotlin, the core languages for Android development.</p>
-            <a href="https://developer.android.com/kotlin" target="_blank">Learn Kotlin for Android</a>
-        </div>
+      <div class="topic">
+        <h3>Understanding Java and Kotlin for Android</h3>
+        <p>
+          Explore Java and Kotlin, the core languages for Android development.
+        </p>
+        <a href="https://developer.android.com/kotlin" target="_blank"
+          >Learn Kotlin for Android</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Creating User Interfaces with XML</h3>
-            <p>Understand how to design UI using XML in Android Studio.</p>
-            <a href="https://developer.android.com/develop/ui" target="_blank">UI Design Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Creating User Interfaces with XML</h3>
+        <p>Understand how to design UI using XML in Android Studio.</p>
+        <a href="https://developer.android.com/develop/ui" target="_blank"
+          >UI Design Guide</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Working with APIs & Networking in Android</h3>
-            <p>Learn how to fetch data from APIs and integrate them into your apps.</p>
-            <a href="https://developer.android.com/training/volley" target="_blank">API & Networking Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Working with APIs & Networking in Android</h3>
+        <p>
+          Learn how to fetch data from APIs and integrate them into your apps.
+        </p>
+        <a href="https://developer.android.com/training/volley" target="_blank"
+          >API & Networking Guide</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Building and Debugging Android Apps</h3>
-            <p>Understand debugging techniques and best practices.</p>
-            <a href="https://developer.android.com/studio/debug" target="_blank">Debugging Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Building and Debugging Android Apps</h3>
+        <p>Understand debugging techniques and best practices.</p>
+        <a href="https://developer.android.com/studio/debug" target="_blank"
+          >Debugging Guide</a
+        >
+      </div>
 
-        <div class="topic">
-            <h3>Publishing Your App to Google Play</h3>
-            <p>Learn how to prepare and publish your app on Google Play.</p>
-            <a href="https://developer.android.com/distribute/google-play" target="_blank">Google Play Publishing Guide</a>
-        </div>
+      <div class="topic">
+        <h3>Publishing Your App to Google Play</h3>
+        <p>Learn how to prepare and publish your app on Google Play.</p>
+        <a
+          href="https://developer.android.com/distribute/google-play"
+          target="_blank"
+          >Google Play Publishing Guide</a
+        >
+      </div>
 
-        <h3 style="color:#ff758c; margin-top: 30px;">Video Tutorials</h3>
-        <div class="video-container">
-            <iframe class="video" src="https://www.youtube.com/embed/fis26HvvDII" frameborder="0" allowfullscreen></iframe>
-            <iframe class="video" src="https://www.youtube.com/embed/mXjZQX3UzOs" frameborder="0" allowfullscreen></iframe>
-        </div>
+      <h3 style="color: #ff758c; margin-top: 30px; text-align: center">
+        Video Tutorials
+      </h3>
+      <div class="video-container">
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/fis26HvvDII"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/mXjZQX3UzOs"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-        <div class="upload-section">
+      <!-- <div class="upload-section">
             <h3>Upload Your Own Learning Material</h3>
             <input type="file" id="uploadFile" accept="image/*,video/*,pdf">
             <p id="uploadMessage"></p>
-        </div>
+        </div> -->
 
-        <button class="button" onclick="document.getElementById('uploadFile').click()">Upload Material</button>
+      <!-- <button class="button" onclick="document.getElementById('uploadFile').click()">Upload Material</button> -->
     </div>
 
     <script>
-        document.getElementById("uploadFile").addEventListener("change", function() {
-            document.getElementById("uploadMessage").innerText = "File uploaded successfully!";
+      document
+        .getElementById("uploadFile")
+        .addEventListener("change", function () {
+          document.getElementById("uploadMessage").innerText =
+            "File uploaded successfully!";
         });
     </script>
-</body>
+  </body>
 </html>
