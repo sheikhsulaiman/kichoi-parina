@@ -3,19 +3,22 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger workflow on push to 'main' branch
+      - main # Trigger the workflow on pushes to the 'main' branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Check out the code from the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # Step 2: Generate Firebase Config File
       - name: Create Firebase Config File
         run: echo '${{ secrets.FIREBASE_CONFIG }}' > public/firebaseConfig.json
 
+      # Step 3: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
